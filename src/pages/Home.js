@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import Slider from "../components/Slider"
 
 const Home = () => {
   return (
@@ -211,6 +212,13 @@ const Home = () => {
 
 
           </div>
+      </div>
+
+
+      <div className="mainCont py-10">
+         <div className="max-w-[1100px] mx-auto">
+          <Slider/>
+         </div>
       </div>
       
 

@@ -31,3 +31,21 @@ select{
   background-position-x: 97%;
   background-position-y: 50%;
 }
+
+.swiper-pagination{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.swiper-pagination-bullet{
+  background-color: #070713 !important;
+  opacity: 0.15 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #070713 !important;
+  opacity: 1 !important;
+}

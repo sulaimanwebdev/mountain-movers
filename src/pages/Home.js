@@ -10,10 +10,11 @@ const Home = () => {
       <div className="relative">
          <div className="relative z-50">
          <div className="py-7"><Header/></div>
+         <img src="/images/hero2.svg" alt="hero" className="flex sm:hidden w-full" />
 
-         <div className="mainCont w-full flex items-start justify-end">
+         <div className="mainCont relative w-full flex items-start sm:justify-end bg-main">
 
-           <div className="boxShadow bg-white rounded-lg p-4 mt-8 mb-12 w-[500px]">
+           <div className="boxShadow relative bg-white rounded-lg p-4 sm:mt-8 mb-12 w-full sm:w-[500px] z-50">
 
               <div>
                  <div className="mb-2 font-[500]">Name</div>
@@ -62,13 +63,14 @@ const Home = () => {
 
              <button className="bg-[#FF8A2C] w-full rounded-lg py-3 flex items-center justify-center gap-3 text-white mt-5">Get rate <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
+ 
            </div>
 
 
          </div>
          </div>
 
-         <img src="/images/hero.svg" alt="hero" className="absolute top-0 left-0 w-full h-full object-cover" />
+         <img src="/images/hero.svg" alt="hero" className="hidden sm:flex absolute top-0 left-0 w-full h-full object-cover" />
       </div>
 
 

@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 
 const Home = () => {
@@ -270,7 +271,8 @@ const Home = () => {
 
 
       <div className="bg-[#F9FAFA] w-full py-10">
-      <div className="mainCont flex items-center justify-center gap-24">
+      <div className="mainCont">
+         <div className="max-w-[1000px] mx-auto flex items-center justify-between gap-10">
          <div className="max-w-[500px]">
             <div className="text-[35px] font-[700]">Contact us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are always here to answer any questions you may have or to provide you with more information about our services.</div>
@@ -298,14 +300,36 @@ const Home = () => {
          </div>
 
          <div>
-            <img src="/images/contact.svg" alt="contact" className="w-[250px]" />
+            <img src="/images/contact.svg" alt="contact" className="w-[300px]" />
+         </div>
          </div>
       </div>
      </div>
 
 
-      
 
+
+
+
+     <div className="mainCont py-10">
+       <div className="text-center mb-10">
+         <div className="text-[17px] text-[#34AD82] uppercase font-[700]">Our PARTNERS</div>
+         <div className="text-[35px] font-[600] mt-2">Learn About <span className="text-[#34AD82]">our Partners</span></div>
+       </div>
+
+       <div className="flex items-center justify-center flex-wrap gap-12">
+          <img src="/images/partner1.svg" alt="partner logo" />
+          <img src="/images/partner2.svg" alt="partner logo" />
+          <img src="/images/partner3.svg" alt="partner logo" />
+          <img src="/images/partner4.svg" alt="partner logo" />
+          <img src="/images/partner5.svg" alt="partner logo" />
+       </div>
+
+      </div>
+
+
+      
+        <Footer/>
 
       
       </div>

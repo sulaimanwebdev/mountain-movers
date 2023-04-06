@@ -15,12 +15,12 @@ const Home = () => {
            <div className="boxShadow bg-white rounded-lg p-4 mt-8 mb-12 w-[500px]">
 
               <div>
-                 <div className="mb-2">Name</div>
+                 <div className="mb-2 font-[500]">Name</div>
                  <input type="text" placeholder="Enter your name" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
               </div>
 
               <div className="mt-5">
-                 <div className="mb-2">Move from</div>
+                 <div className="mb-2 font-[500]">Move from</div>
                  <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
                   <option>Choose location</option>
                   <option>New York</option>
@@ -29,12 +29,12 @@ const Home = () => {
               </div>
 
               <div className="mt-5">
-                 <div className="mb-2">Email</div>
+                 <div className="mb-2 font-[500]">Email</div>
                  <input type="email" placeholder="Enter your email" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
               </div>
 
               <div className="mt-5">
-                 <div className="mb-2">Move to</div>
+                 <div className="mb-2 font-[500]">Move to</div>
                  <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
                   <option>Choose location</option>
                   <option>New York</option>
@@ -44,13 +44,13 @@ const Home = () => {
 
 
               <div className="mt-5">
-                 <div className="mb-2">Phone</div>
+                 <div className="mb-2 font-[500]">Phone</div>
                  <input type="text" placeholder="Enter your phone number" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
               </div>
 
 
               <div className="mt-5">
-                 <div className="mb-2">Move to</div>
+                 <div className="mb-2 font-[500]">Move to</div>
                  <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
                   <option>Choose type</option>
                   <option>Big Products</option>
@@ -216,10 +216,94 @@ const Home = () => {
 
 
       <div className="mainCont py-10">
-         <div className="max-w-[1100px] mx-auto">
+         <div className="max-w-[1000px] mx-auto">
           <Slider/>
          </div>
       </div>
+
+
+
+      <div className="mainCont py-20">
+         <div className="max-w-[1000px] grid grid-cols-2 gap-5 mx-auto">
+          
+           <div className="grid grid-cols-2 gap-5">
+             <div className="flex items-start justify-between flex-col rounded-xl h-full bg-[#F7F7F8] p-6">
+                 <div className="opacity-50">Get to know the experts behind our exceptional service by contacting us.</div>
+                 <button className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">Contact our team <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+             </div>
+
+             <div className="grid grid-row-2 gap-5">
+                <div className="flex items-start justify-between flex-col rounded-xl h-full bg-[#EBFFF8] p-6">
+                 <div className="opacity-50 mb-10">Stay up-to-date with the latest news and insights from us.</div>
+                 <button className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">Read our blog <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+
+                <div className="flex items-start justify-between flex-col rounded-xl h-full bg-[#FCF1ED] p-6">
+                 <div className="opacity-50 mb-10">Discover how we plan and execute each move with a commitment to excellence.</div>
+                 <button className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">See how it works <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+
+             </div>
+           </div>
+
+
+           <div className="relative flex items-start justify-between flex-col rounded-xl h-full p-6 overflow-hidden">
+             <div className="relative z-20 flex items-start justify-between flex-col h-full">
+                <div>
+                <div className="text-[#FF8A2C]">MOVING TIPS</div>
+                <div className="text-white text-[35px] font-[700] leading-[44px] mt-3">5 Tips for Planning a Long-Distance Move</div>
+                </div>
+
+             <button className="bg-[#FF8A2C] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-10">Read more <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                
+             </div>
+ 
+            <img src="/images/man.png" alt="man" className="absolute top-0 left-0 w-full h-full object-cover object-" />
+           </div>
+
+
+         </div>
+      </div>
+
+
+
+
+
+      <div className="bg-[#F9FAFA] w-full py-10">
+      <div className="mainCont flex items-center justify-center gap-24">
+         <div className="max-w-[500px]">
+            <div className="text-[35px] font-[700]">Contact us</div>
+            <div className="text-[18px] opacity-[0.5] mt-3">We are always here to answer any questions you may have or to provide you with more information about our services.</div>
+            
+            <div className="mt-7">
+            <div>
+              <div className="mb-2 font-[500]">Name</div>
+              <input type="text" placeholder="Enter your name" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
+            </div>
+
+            <div className="mt-5">
+              <div className="mb-2 font-[500]">Email</div>
+              <input type="email" placeholder="Enter your email" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
+            </div>
+
+
+            <div className="mt-5">
+              <div className="mb-2 font-[500]">Write a message</div>
+              <textarea placeholder="Enter your message" className="boxShadow resize-none h-[150px] w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]"></textarea>
+            </div>
+
+
+            </div>
+
+         </div>
+
+         <div>
+            <img src="/images/contact.svg" alt="contact" className="w-[250px]" />
+         </div>
+      </div>
+     </div>
+
+
       
 
 

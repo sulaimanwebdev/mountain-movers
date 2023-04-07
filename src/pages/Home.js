@@ -14,7 +14,7 @@ const Home = () => {
 
          <div className="mainCont relative w-full flex items-start sm:justify-end bg-main sm:bg-transparent">
 
-           <div className="boxShadow relative bg-white rounded-lg p-4 sm:mt-8 mb-12 w-full sm:w-[500px] z-50">
+           <div className="boxShadow relative bg-white rounded-lg p-4 -mt-12 sm:mt-8 sm:mb-12 w-full sm:w-[500px] z-50">
 
               <div>
                  <div className="mb-2 font-[500]">Name</div>
@@ -74,10 +74,10 @@ const Home = () => {
       </div>
 
 
-      <div className="w-full bg-main py-20">
-         <div className="mainCont grid grid-cols-2 gap-8">
+      <div className="w-full bg-main py-10 lg3:py-20">
+         <div className="mainCont flex flex-col-reverse lg3:grid grid-cols-2 gap-10 lg3:gap-8">
 
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                <div className="bg-white rounded-lg p-7">
                    <img src="/images/icon1.svg" alt="icon" />
                    <div className="font-semibold text-[20px] mt-5 mb-2">Residential Moving</div>
@@ -107,11 +107,11 @@ const Home = () => {
 
 
 
-          <div className="flex  justify-center flex-col text-white">
+          <div className="flex justify-center flex-col text-white mt-3 lg3:mt-0">
               <div className="text-[#F4FAF4] uppercase text-[17px]">Our Services</div>
-              <div className="text-[40px] font-[600] leading-[56px] mt-3">Your move, our responsibility. We've got you covered inside and out.</div>
-              <div className="text-[#F6FAFF] text-[18px] leading-[30px] mt-10">We've been in the business for 5 years and have found that our customers love the services featured on the right side of our website the most.</div>
-             <button className="bg-[#FF8A2C] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-10">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div className="text-[35px] sm:text-[40px] font-[600] leading-[56px] mt-3">Your move, our responsibility. We've got you covered inside and out.</div>
+              <div className="text-[#F6FAFF] text-[18px] leading-[30px] mt-3 lg3:mt-10">We've been in the business for 5 years and have found that our customers love the services featured on the right side of our website the most.</div>
+             <button className="bg-[#FF8A2C] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-8 lg3:mt-10">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
 
 
@@ -120,17 +120,17 @@ const Home = () => {
 
 
 
-     <div className="bg-[#F9FAFA] w-full py-10">
+     <div className="md:bg-[#F9FAFA] w-full py-10">
       <div className="mainCont">
-        <div className="max-w-[1000px] mx-auto flex items-center justify-between gap-5">
+        <div className="max-w-[1000px] mx-auto flex items-start md:items-center md:justify-between flex-col-reverse md:flex-row gap-5">
         <div className="max-w-[700px]">
             <div className="text-[35px] font-[700]">About us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are a full-service moving company dedicated to providing exceptional service to our customers. Our team are professionals that trained to handle all aspects of your move, from packing and loading to transportation and unloading.</div>
             <button className="flex items-center gap-2 text-[#1C7B5A] mt-4">Learn more <svg width="8" height="12" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="#1C7B5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
          </div>
 
-         <div>
-            <img src="/images/about.svg" alt="about" className="w-[250px]" />
+         <div className="flex items-center justify-center md:items-start md:justify-start w-full md:w-auto">
+            <img src="/images/about.svg" alt="about" className="w-[200px] md:w-auto md:min-w-[250px] md:max-w-[250px]" />
          </div>
         </div>
       </div>
@@ -138,13 +138,13 @@ const Home = () => {
 
 
 
-      <div className="mainCont py-10">
-           <div className="text-center mb-20">
+      <div className="mainCont bg-[#F9FAFA] md:bg-transparent py-10">
+           <div className="text-center mb-10 md:mb-20">
             <div className="text-[17px] text-[#34AD82] uppercase font-[700]">Our Values</div>
             <div className="text-[35px] font-[600] mt-2">Your Satisfaction is <span className="text-[#34AD82]">Our Priority</span></div>
            </div>
 
-           <div className="grid grid-cols-2 gap-20 max-w-[1000px] mx-auto">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-5 max-w-[1000px] mx-auto bg-white md:bg-transparent rounded-xl md:rounded-none px-4 md-px-0 py-8 md-py-0">
               <div>
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] pb-4">
                         <img src="/images/icon5.svg" alt="icon" />
@@ -183,7 +183,9 @@ const Home = () => {
 
               </div>
 
-              <img src="/images/values.svg" alt="values" />
+              <div className="flex justify-center md:justify-end">
+               <img src="/images/values.svg" alt="values" />
+              </div>
 
            </div>
       </div>
@@ -198,7 +200,7 @@ const Home = () => {
             <div className="text-[35px] font-[600] mt-2">Trusted by <span className="text-[#34AD82]">50+</span> Customers</div>
           </div>
 
-          <div className="grid grid-cols-3 gap-5 max-w-[1000px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1000px] mx-auto">
 
              <div className="rounded-lg border-solid border border-[#F5F6F6] p-5">
                 <div className="text-[35px] font-semibold mb-2">25,000+</div>
@@ -221,19 +223,19 @@ const Home = () => {
 
 
       <div className="mainCont py-10">
-         <div className="max-w-[1000px] mx-auto">
+         <div className="relative max-w-[1000px] mx-auto overflow-hidden">
           <Slider/>
          </div>
       </div>
 
 
 
-      <div className="mainCont py-20">
-         <div className="max-w-[1000px] grid grid-cols-2 gap-5 mx-auto">
+      <div className="mainCont py-10 lg5:py-20">
+         <div className="max-w-[1000px] grid grid-cols-1 lg5:grid-cols-2 gap-5 mx-auto">
           
-           <div className="grid grid-cols-2 gap-5">
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
              <div className="flex items-start justify-between flex-col rounded-xl h-full bg-[#F7F7F8] p-6">
-                 <div className="opacity-50">Get to know the experts behind our exceptional service by contacting us.</div>
+                 <div className="opacity-50 mb-10 sm:mb-0">Get to know the experts behind our exceptional service by contacting us.</div>
                  <button className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">Contact our team <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
              </div>
 
@@ -252,11 +254,11 @@ const Home = () => {
            </div>
 
 
-           <div className="relative flex items-start justify-between flex-col rounded-xl h-full p-6 overflow-hidden">
+           <div className="relative flex items-start justify-between flex-col rounded-xl h-[300px] lg5:h-full p-6 overflow-hidden">
              <div className="relative z-20 flex items-start justify-between flex-col h-full">
                 <div>
                 <div className="text-[#FF8A2C]">MOVING TIPS</div>
-                <div className="text-white text-[35px] font-[700] leading-[44px] mt-3">5 Tips for Planning a Long-Distance Move</div>
+                <div className="text-white text-[30px] sm:text-[35px] font-[700] leading-[44px] mt-3">5 Tips for Planning a Long-Distance Move</div>
                 </div>
 
              <button className="bg-[#FF8A2C] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-10">Read more <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -274,10 +276,10 @@ const Home = () => {
 
 
 
-      <div className="bg-[#F9FAFA] w-full py-10">
+      <div className="md:bg-[#F9FAFA] w-full py-10">
       <div className="mainCont">
-         <div className="max-w-[1000px] mx-auto flex items-center justify-between gap-10">
-         <div className="max-w-[500px]">
+         <div className="max-w-[1000px] mx-auto flex items-start md:items-center md:justify-between flex-col md:flex-row gap-10">
+         <div className="md:max-w-[500px]">
             <div className="text-[35px] font-[700]">Contact us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are always here to answer any questions you may have or to provide you with more information about our services.</div>
             
@@ -303,9 +305,9 @@ const Home = () => {
 
          </div>
 
-         <div>
-            <img src="/images/contact.svg" alt="contact" className="w-[300px]" />
-         </div>
+            <img src="/images/contact.svg" alt="contact" className="hidden md:flex w-[250px] md:w-auto md:min-w-[300px] md:max-w-[300px] mx-auto md:mx-0" />
+            <img src="/images/contact2.svg" alt="contact" className="flex md:hidden w-[250px] md:w-auto md:min-w-[300px] md:max-w-[300px] mx-auto md:mx-0" />
+
          </div>
       </div>
      </div>

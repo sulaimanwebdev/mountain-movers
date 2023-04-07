@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="mainCont mt-14">
-       <div className="max-w-[1000px] mx-auto flex items-start justify-between">
+       <div className="max-w-[1000px] mx-auto flex items-start sm:justify-between gap-10 sm:gap-0 flex-col sm:flex-row">
          <div>
           <Link to="/"><img src="/images/logo.svg" alt="logo" /></Link>
           <div className="mt-2">Making Your Move Stress-Free</div>
@@ -16,36 +16,12 @@ const Footer = () => {
          </div>
 
 
-         <div className="flex items-start gap-10 -ml-20">
-            <div>
-                <div className="text-[#34AD82] text-[18px] font-[700] mb-2">About</div>
-                <a href="#" className="flex mt-3">Our Story</a>
-                <a href="#" className="flex mt-3">Benefits</a>
-                <a href="#" className="flex mt-3">Team</a>
-                <a href="#" className="flex mt-3">Careers</a>
-            </div>
-
-            <div>
-                <div className="text-[#34AD82] text-[18px] font-[700] mb-2">Help</div>
-                <a href="#" className="flex mt-3">FAQs</a>
-                <a href="#" className="flex mt-3">Contact Us</a>
-            </div>
-
-            <div>
-                <div className="text-[#34AD82] text-[18px] font-[700] mb-2">Services</div>
-                <a href="#" className="flex mt-3">Email Marketing</a>
-                <a href="#" className="flex mt-3">Campaigns</a>
-                <a href="#" className="flex mt-3">Branding</a>
-                <a href="#" className="flex mt-3">Offline</a>
-            </div>
-
-         </div>
 
          <div>
           <div className="text-[18px] font-[700] mb-2">Subscribe to our <br/> newsletter</div>
 
           <div className="flex items-center w-fit h-[50px]">
-            <input type="email" placeholder="Email address" className="placeholder-[#A9A9B4] pr-1 bg-white h-full outline-none border-b border-not-black border-opacity-[0.12]" />
+            <input type="email" placeholder="Email address" className="placeholder-[#A9A9B4] pr-1 bg-white h-full outline-none border-b border-not-black border-opacity-[0.12] w-full" />
             <button className="flex items-center justify-center rounded-tr-lg rounded-br-lg bg-main w-[40px] h-full"><svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.428802 9.13333L3.66309 5.3125L0.428802 1.49167L1.42695 0.3125L5.65939 5.3125L1.42695 10.3125L0.428802 9.13333Z" fill="white"/></svg></button>
           </div>
             

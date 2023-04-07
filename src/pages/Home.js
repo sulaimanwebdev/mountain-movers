@@ -12,7 +12,7 @@ const Home = () => {
          <div className="py-7"><Header/></div>
          <img src="/images/hero2.svg" alt="hero" className="flex sm:hidden w-full" />
 
-         <div className="mainCont relative w-full flex items-start sm:justify-end bg-main">
+         <div className="mainCont relative w-full flex items-start sm:justify-end bg-main sm:bg-transparent">
 
            <div className="boxShadow relative bg-white rounded-lg p-4 sm:mt-8 mb-12 w-full sm:w-[500px] z-50">
 
@@ -121,8 +121,9 @@ const Home = () => {
 
 
      <div className="bg-[#F9FAFA] w-full py-10">
-      <div className="mainCont flex items-center justify-center gap-16">
-         <div className="max-w-[600px]">
+      <div className="mainCont">
+        <div className="max-w-[1000px] mx-auto flex items-center justify-between gap-5">
+        <div className="max-w-[700px]">
             <div className="text-[35px] font-[700]">About us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are a full-service moving company dedicated to providing exceptional service to our customers. Our team are professionals that trained to handle all aspects of your move, from packing and loading to transportation and unloading.</div>
             <button className="flex items-center gap-2 text-[#1C7B5A] mt-4">Learn more <svg width="8" height="12" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="#1C7B5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -131,6 +132,7 @@ const Home = () => {
          <div>
             <img src="/images/about.svg" alt="about" className="w-[250px]" />
          </div>
+        </div>
       </div>
      </div>
 
@@ -142,7 +144,7 @@ const Home = () => {
             <div className="text-[35px] font-[600] mt-2">Your Satisfaction is <span className="text-[#34AD82]">Our Priority</span></div>
            </div>
 
-           <div className="grid grid-cols-2 gap-20 max-w-[1100px] mx-auto">
+           <div className="grid grid-cols-2 gap-20 max-w-[1000px] mx-auto">
               <div>
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] pb-4">
                         <img src="/images/icon5.svg" alt="icon" />

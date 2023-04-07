@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="mainCont mt-14">
-       <div className="max-w-[1000px] mx-auto flex items-start sm:justify-between gap-10 sm:gap-0 flex-col sm:flex-row">
+       <div className="flex items-start sm:justify-between gap-10 sm:gap-0 flex-col sm:flex-row">
          <div>
           <Link to="/"><img src="/images/logo.svg" alt="logo" /></Link>
           <div className="mt-2">Making Your Move Stress-Free</div>

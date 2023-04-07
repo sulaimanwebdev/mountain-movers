@@ -10,10 +10,10 @@ const Header = () => {
       <div className="flex items-center gap-12">
          <Link to="/"><img src="/images/logo.svg" alt="logo" className="w-[150px] sm2:w-auto"/></Link>
          <div className={`lg2:translate-x-0 ${menu} transition flex items-start lg2:items-center p-4 pt-12 lg2:pt-0 flex-col border-4 border-solid border-main lg2:flex-row gap-6 fixed top-0 left-0 w-full h-screen z-[60] bg-white lg2:bg-transparent lg2:relative lg2:top-auto lg2:left-auto lg2:h-auto lg2:border-none lg2:w-auto lg2:p-0 max-h-screen overflow-y-auto`}>
-            <a href="#home" className="hover:text-main">Home</a>
-            <a href="#services" className="hover:text-main">Our Services</a>
-            <a href="#about" className="hover:text-main">About Us</a>
-            <a href="#values" className="hover:text-main">Our Values</a>
+            <Link to="/" className="hover:text-main">Home</Link>
+            <a href="/#services" className="hover:text-main">Our Services</a>
+            <a href="/#about" className="hover:text-main">About Us</a>
+            <a href="/#values" className="hover:text-main">Our Values</a>
             <Link to="/blog" className="hover:text-main">Blog</Link>
             <button onClick={()=> {setmenu('translate-x-full')}} className="flex lg2:hidden absolute top-3 right-3"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#08AC85" className="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button>
          

@@ -5,7 +5,6 @@ import "swiper/css/pagination";
 
 const Slider3 = () => {
 
-
   return (
     <>
     <Swiper 
@@ -39,16 +38,9 @@ const Slider3 = () => {
 
         <SwiperSlide>
             <div className="flex items-centre justify-center">
-            <img src="/images/partner4.svg" alt="partner logo" className="w-[150px]" />
-            </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className="flex items-centre justify-center">
             <img src="/images/partner5.svg" alt="partner logo" className="w-[150px]" />
             </div>
         </SwiperSlide>
-
 
      </Swiper>
     </>

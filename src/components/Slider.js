@@ -15,7 +15,7 @@ const Slider = () => {
     <>
     <Swiper 
      autoplay={{
-      delay: 2500,
+      delay: 10000,
      }}
      pagination={pagination}
      modules={[Pagination, Autoplay]}

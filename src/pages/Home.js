@@ -1,17 +1,34 @@
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 import CountUp, { useCountUp } from 'react-countup';
 import Slider3 from "../components/Slider3";
+import GetRate from '../components/GetRate'
 
 const Home = () => {
+
+   let [isOpen, setIsOpen] = useState(false)
+
+   function closeModal() {
+      setIsOpen(false)
+    }
+  
+    function openModal() {
+      setIsOpen(true)
+    }
 
    useCountUp({
       ref: 'counter',
       enableScrollSpy: true,
     });
+
+
+    
 
   return (
     <>
@@ -26,53 +43,7 @@ const Home = () => {
 
            <div className="boxShadow relative bg-white rounded-lg p-4 -mt-12 sm:mt-8 sm:mb-12 w-full sm:w-[500px] z-50">
 
-              <div>
-                 <div className="mb-2 font-[500]">Name</div>
-                 <input type="text" placeholder="Enter your name" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
-              </div>
-
-              <div className="mt-5">
-                 <div className="mb-2 font-[500]">Move from</div>
-                 <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
-                  <option>Choose location</option>
-                  <option>New York</option>
-                  <option>Ohio</option>
-                 </select>
-              </div>
-
-              <div className="mt-5">
-                 <div className="mb-2 font-[500]">Email</div>
-                 <input type="email" placeholder="Enter your email" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
-              </div>
-
-              <div className="mt-5">
-                 <div className="mb-2 font-[500]">Move to</div>
-                 <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
-                  <option>Choose location</option>
-                  <option>New York</option>
-                  <option>Ohio</option>
-                 </select>
-              </div>
-
-
-              <div className="mt-5">
-                 <div className="mb-2 font-[500]">Phone</div>
-                 <input type="text" placeholder="Enter your phone number" className="boxShadow w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]" />
-              </div>
-
-
-              <div className="mt-5">
-                 <div className="mb-2 font-[500]">Move to</div>
-                 <select style={{backgroundImage: "url(/images/arrow.svg)"}} className="cursor-pointer text-[#A9A9B4] boxShadow w-full rounded-lg bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]">
-                  <option>Choose type</option>
-                  <option>Big Products</option>
-                  <option>Small Products</option>
-                 </select>
-              </div>
-
-
-             <button className="bg-[#FF8A2C] transition hover:bg-[#f27d1f] w-full rounded-lg py-3 flex items-center justify-center gap-3 text-white mt-5">Get rate <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-
+              <GetRate/>
  
            </div>
 
@@ -122,7 +93,7 @@ const Home = () => {
               <div className="text-[#F4FAF4] uppercase text-[17px]">Our Services</div>
               <div className="text-[35px] sm:text-[40px] font-[600] leading-[45px] sm:leading-[56px] mt-3">Your move, our responsibility. We've got you covered inside and out.</div>
               <div className="text-[#F6FAFF] text-[18px] leading-[30px] mt-3">We've been in the business for 5 years and have found that our customers love the services featured on the right side of our website the most.</div>
-             <button className="bg-[#FF8A2C] transition hover:bg-[#f27d1f] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-8 lg3:mt-7">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+             <button onClick={openModal} className="bg-[#FF8A2C] transition hover:bg-[#f27d1f] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-8 lg3:mt-7">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
           </Fade>
 
@@ -159,10 +130,11 @@ const Home = () => {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-5 max-w-[1000px] mx-auto bg-white md:bg-transparent rounded-xl md:rounded-none px-4 md-px-0 py-8 md-py-0">
-           <Fade left>
               <div>
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] pb-4">
-                        <img src="/images/icon5.svg" alt="icon" />
+                   <Flip left>
+                   <img src="/images/icon5.svg" alt="icon" />
+                  </Flip>
                      <div>
                         <div className="text-[22px] font-semibold">Security</div>
                         <div className="text-[17px] opacity-50">We pay attention to every detail to ensure a safe move.</div>
@@ -171,7 +143,10 @@ const Home = () => {
 
 
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] mt-7 pb-4">
+                   <Flip left>
+                        
                         <img src="/images/icon6.svg" alt="icon" />
+                        </Flip>
                      <div>
                         <div className="text-[22px] font-semibold">Skills</div>
                         <div className="text-[17px] opacity-50">We have the experience in loading and moving packages using a simple and effective strategy.</div>
@@ -180,7 +155,10 @@ const Home = () => {
 
 
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] mt-7 pb-4">
+                   <Flip left>
+                       
                         <img src="/images/icon7.svg" alt="icon" />
+                        </Flip>
                      <div>
                         <div className="text-[22px] font-semibold">Positivity</div>
                         <div className="text-[17px] opacity-50">We value having a great relationship with our customers.</div>
@@ -189,7 +167,10 @@ const Home = () => {
 
 
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] mt-7 pb-4">
+                   <Flip left>
+                        
                         <img src="/images/icon8.svg" alt="icon" />
+                        </Flip>
                      <div>
                         <div className="text-[22px] font-semibold">Punctual</div>
                         <div className="text-[17px] opacity-50">We make sure to value yours and ours by managing it efficiently.</div>
@@ -197,7 +178,6 @@ const Home = () => {
                   </div>
 
               </div>
-              </Fade>
               <Fade right>
               <div className="flex justify-center md:justify-end">
                <img src="/images/values.svg" alt="values" />
@@ -321,7 +301,7 @@ const Home = () => {
               <textarea placeholder="Enter your message" className="boxShadow resize-none h-[150px] w-full rounded-lg placeholder-[#A9A9B4] bg-white px-2.5 py-2 outline-none border border-not-black border-opacity-[0.12]"></textarea>
             </div>
 
-            <a href="tel:5149841522" className="bg-main transition hover:bg-[#1f7a5a] px-5 py-3 rounded-lg text-white flex items-center gap-3 w-fit mt-3">Send message</a>
+            <button className="bg-main transition hover:bg-[#1f7a5a] px-5 py-3 rounded-lg text-white flex items-center gap-3 w-fit mt-3">Send message</button>
 
             </div>
 
@@ -351,7 +331,6 @@ const Home = () => {
           <img src="/images/partner1.svg" alt="partner logo" />
           <img src="/images/partner2.svg" alt="partner logo" />
           <img src="/images/partner3.svg" alt="partner logo" />
-          <img src="/images/partner4.svg" alt="partner logo" />
           <img src="/images/partner5.svg" alt="partner logo" />
        </div>
 
@@ -366,6 +345,51 @@ const Home = () => {
         <Footer/>
       
       </div>
+
+
+
+
+   {/* Popup */}
+
+   <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-[60]" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-main bg-opacity-80" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-4 text-left align-middle shadow-xl transition-all">
+                  
+                 <div className="flex items-center justify-end">
+                  <button onClick={closeModal}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#32AB80" className="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button>
+                 </div>                  
+                  
+                  <GetRate/>
+               
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </>
   )
 }

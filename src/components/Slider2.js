@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
+
 
 const Slider2 = () => {
 
@@ -79,7 +80,10 @@ const Slider2 = () => {
           //     swiper.navigation.update()
           //   })
           // }}
-          modules={[Navigation, Pagination]}
+          autoplay={{
+            delay: 2500,
+           }}
+          modules={[Navigation, Pagination, Autoplay]}
           className='w-full'
         >
               <SwiperSlide

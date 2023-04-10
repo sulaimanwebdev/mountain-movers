@@ -10,6 +10,12 @@ html{
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#root{
+  overflow-x: hidden;
 }
 
 .mainCont{

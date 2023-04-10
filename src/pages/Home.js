@@ -2,8 +2,17 @@ import { Link } from "react-router-dom"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Slider from "../components/Slider"
+import Fade from 'react-reveal/Fade';
+import CountUp, { useCountUp } from 'react-countup';
+import Slider3 from "../components/Slider3";
 
 const Home = () => {
+
+   useCountUp({
+      ref: 'counter',
+      enableScrollSpy: true,
+    });
+
   return (
     <>
       <div className="text-not-black">
@@ -76,8 +85,8 @@ const Home = () => {
 
 
       <div id="services" className="w-full bg-main py-10 lg3:py-20">
-         <div className="mainCont flex flex-col-reverse lg3:grid grid-cols-2 gap-10 lg3:gap-8">
-
+         <div className="mainCont flex flex-col-reverse lg3:grid grid-cols-2 gap-10 lg3:gap-12">
+         <Fade left>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                <div className="bg-white rounded-lg p-7">
                    <img src="/images/icon1.svg" alt="icon" />
@@ -105,16 +114,17 @@ const Home = () => {
                </div>
 
           </div>
+          </Fade>
 
 
-
+          <Fade right>
           <div className="flex justify-center flex-col text-white mt-3 lg3:mt-0">
               <div className="text-[#F4FAF4] uppercase text-[17px]">Our Services</div>
-              <div className="text-[35px] sm:text-[40px] font-[600] leading-[56px] mt-3">Your move, our responsibility. We've got you covered inside and out.</div>
-              <div className="text-[#F6FAFF] text-[18px] leading-[30px] mt-3 lg3:mt-10">We've been in the business for 5 years and have found that our customers love the services featured on the right side of our website the most.</div>
-             <button className="bg-[#FF8A2C] transition hover:bg-[#f27d1f] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-8 lg3:mt-10">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div className="text-[35px] sm:text-[40px] font-[600] leading-[45px] sm:leading-[56px] mt-3">Your move, our responsibility. We've got you covered inside and out.</div>
+              <div className="text-[#F6FAFF] text-[18px] leading-[30px] mt-3">We've been in the business for 5 years and have found that our customers love the services featured on the right side of our website the most.</div>
+             <button className="bg-[#FF8A2C] transition hover:bg-[#f27d1f] w-fit rounded-lg py-3 flex items-center justify-center gap-3 text-white px-6 mt-8 lg3:mt-7">Choose a Package <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.5H13.5M13.5 7.5L7.5 1.5M13.5 7.5L7.5 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
-
+          </Fade>
 
          </div>
       </div>
@@ -124,15 +134,18 @@ const Home = () => {
      <div id="about" className="md:bg-[#F9FAFA] w-full py-10">
       <div className="mainCont">
         <div className="max-w-[1000px] mx-auto flex items-start md:items-center md:justify-between flex-col-reverse md:flex-row gap-5">
-        <div className="max-w-[700px]">
+        <Fade left>
+        <div className="max-w-[600px]">
             <div className="text-[35px] font-[700]">About us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are a full-service moving company dedicated to providing exceptional service to our customers. Our team are professionals that trained to handle all aspects of your move, from packing and loading to transportation and unloading.</div>
             <button className="flex items-center gap-2 text-[#1C7B5A] mt-4 group">Learn more <svg width="8" height="12" className="transition group-hover:translate-x-1" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="#1C7B5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
          </div>
-
+         </Fade>
+         <Fade right>
          <div className="flex items-center justify-center md:items-start md:justify-start w-full md:w-auto">
             <img src="/images/about.svg" alt="about" className="w-[200px] md:w-auto md:min-w-[250px] md:max-w-[250px]" />
          </div>
+         </Fade>
         </div>
       </div>
      </div>
@@ -146,6 +159,7 @@ const Home = () => {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-5 max-w-[1000px] mx-auto bg-white md:bg-transparent rounded-xl md:rounded-none px-4 md-px-0 py-8 md-py-0">
+           <Fade left>
               <div>
                   <div className="flex items-start gap-7 border-solid border-b border-[#E9ECF2] pb-4">
                         <img src="/images/icon5.svg" alt="icon" />
@@ -183,11 +197,12 @@ const Home = () => {
                   </div>
 
               </div>
-
+              </Fade>
+              <Fade right>
               <div className="flex justify-center md:justify-end">
                <img src="/images/values.svg" alt="values" />
               </div>
-
+              </Fade>
            </div>
       </div>
 
@@ -204,49 +219,52 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1000px] mx-auto">
 
              <div className="rounded-lg border-solid border border-[#F5F6F6] p-5">
-                <div className="text-[35px] font-semibold mb-2">25,000+</div>
+                <div className="text-[35px] font-semibold mb-2"><CountUp end={25000} enableScrollSpy />+</div>
                 <div className="text-[18px] opacity-50">Join our community of over 25,000+ satisfied customers.</div>
              </div>
 
              <div className="rounded-lg border-solid border border-[#F5F6F6] p-5">
-                <div className="text-[35px] font-semibold mb-2">150</div>
+                <div className="text-[35px] font-semibold mb-2"><CountUp end={150} enableScrollSpy /></div>
                 <div className="text-[18px] opacity-50">We are one of the top 150 highly reviewed moving companies.</div>
              </div>
 
              <div className="rounded-lg border-solid border border-[#F5F6F6] p-5">
-                <div className="text-[35px] font-semibold mb-2">5.0</div>
+                <div className="text-[35px] font-semibold mb-2"><CountUp end={5} enableScrollSpy />.0</div>
                 <div className="text-[18px] opacity-50">Our commitment to excellence has earned us a perfect 5.0 Google rating.</div>
              </div>
 
-
           </div>
+
       </div>
 
 
       <div className="mainCont py-10">
          <div className="relative max-w-[1000px] mx-auto overflow-hidden">
+         <Fade bottom>
           <Slider/>
+          </Fade>
          </div>
       </div>
 
 
 
       <div className="mainCont py-10 lg5:py-20">
+      <Fade bottom>
          <div className="max-w-[1000px] grid grid-cols-1 lg5:grid-cols-2 gap-5 mx-auto">
           
            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-             <a href="#contact" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#F7F7F8] transition hover:scale-105 p-6">
+             <a href="#contact" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#F7F7F8] transition hover:scale-95 p-6">
                  <div className="opacity-50 mb-10 sm:mb-0">Get to know the experts behind our exceptional service by contacting us.</div>
                  <div className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">Contact our team <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
              </a>
 
              <div className="grid grid-row-2 gap-5">
-                <Link to="/blog" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#EBFFF8] transition hover:scale-105 p-6">
+                <Link to="/blog" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#EBFFF8] transition hover:scale-95 p-6">
                  <div className="opacity-50 mb-10">Stay up-to-date with the latest news and insights from us.</div>
                  <div className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">Read our blog <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 </Link>
 
-                <a href="#contact" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#FCF1ED] transition hover:scale-105 p-6">
+                <a href="#contact" className="flex items-start justify-between flex-col rounded-xl h-full bg-[#FCF1ED] transition hover:scale-95 p-6">
                  <div className="opacity-50 mb-10">Discover how we plan and execute each move with a commitment to excellence.</div>
                  <div className="flex items-end justify-between gap-3 text-[24px] font-[700] w-fit text-left leading-[35px]">See how it works <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H17V17" stroke="#070713" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 </a>
@@ -255,7 +273,7 @@ const Home = () => {
            </div>
 
 
-           <div className="relative flex items-start justify-between flex-col rounded-xl h-[300px] lg5:h-full p-6 overflow-hidden">
+           <div className="relative group flex items-start justify-between flex-col rounded-xl h-[300px] lg5:h-full p-6 overflow-hidden">
              <div className="relative z-20 flex items-start justify-between flex-col h-full">
                 <div>
                 <div className="text-[#FF8A2C]">MOVING TIPS</div>
@@ -266,11 +284,12 @@ const Home = () => {
                 
              </div>
  
-            <img src="/images/man.png" alt="man" className="absolute top-0 left-0 w-full h-full object-cover object-" />
+            <img src="/images/man.png" alt="man" className="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-110 transition" />
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
            </div>
-
-
          </div>
+
+         </Fade>
       </div>
 
 
@@ -279,7 +298,8 @@ const Home = () => {
 
       <div id="contact" className="md:bg-[#F9FAFA] w-full py-10">
       <div className="mainCont">
-         <div className="max-w-[1000px] mx-auto flex items-start md:items-center md:justify-between flex-col md:flex-row gap-10">
+         <div className="max-w-[1000px] mx-auto flex items-start md:items-center md:justify-between flex-col-reverse md:flex-row gap-10">
+         <Fade left>
          <div className="md:max-w-[500px]">
             <div className="text-[35px] font-[700]">Contact us</div>
             <div className="text-[18px] opacity-[0.5] mt-3">We are always here to answer any questions you may have or to provide you with more information about our services.</div>
@@ -306,10 +326,11 @@ const Home = () => {
             </div>
 
          </div>
-
+         </Fade>
+         <Fade right>
             <img src="/images/contact.svg" alt="contact" className="hidden md:flex w-[250px] md:w-auto md:min-w-[300px] md:max-w-[300px] mx-auto md:mx-0" />
             <img src="/images/contact2.svg" alt="contact" className="flex md:hidden w-[250px] md:w-auto md:min-w-[300px] md:max-w-[300px] mx-auto md:mx-0" />
-
+            </Fade>
          </div>
       </div>
      </div>
@@ -324,14 +345,21 @@ const Home = () => {
          <div className="text-[17px] text-[#34AD82] uppercase font-[700]">Our PARTNERS</div>
          <div className="text-[35px] font-[600] mt-2">Learn About <span className="text-[#34AD82]">our Partners</span></div>
        </div>
+       <Fade bottom>
 
-       <div className="flex items-center justify-center flex-wrap gap-12">
+       <div className="hidden md:flex items-center justify-center flex-wrap gap-12">
           <img src="/images/partner1.svg" alt="partner logo" />
           <img src="/images/partner2.svg" alt="partner logo" />
           <img src="/images/partner3.svg" alt="partner logo" />
           <img src="/images/partner4.svg" alt="partner logo" />
           <img src="/images/partner5.svg" alt="partner logo" />
        </div>
+
+       <div className="flex md:hidden">
+       <Slider3/>
+       </div>
+
+       </Fade>
 
       </div>
       
